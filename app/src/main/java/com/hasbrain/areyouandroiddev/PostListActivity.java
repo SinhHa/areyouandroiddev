@@ -15,23 +15,25 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class PostListActivity extends AppCompatActivity {
+
+    public static final String DATA_JSON_FILE_NAME = "data.json";
     private FeedDataStore feedDataStore;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(getLayoutResource());
         GsonBuilder gsonBuilder = new GsonBuilder();
         gsonBuilder.registerTypeAdapter(RedditPost.class, new RedditPostConverter());
         Gson gson = gsonBuilder.create();
         InputStream is = null;
         try {
-            is = getAssets().open("data.json");
+            is = getAssets().open(DATA_JSON_FILE_NAME);
             feedDataStore = new FileBasedFeedDataStore(gson, is);
             feedDataStore.getPostList(new FeedDataStore.OnRedditPostsRetrievedListener() {
                 @Override
                 public void onRedditPostsRetrieved(List<RedditPost> postList, Exception ex) {
-                    //TODO: Display your posts here.
+                    displayPostList(postList);
                 }
             });
         } catch (IOException e) {
@@ -45,5 +47,13 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
+    }
+
+    protected void displayPostList(List<RedditPost> postList) {
+        //TODO: Display post list.
+    }
+
+    protected int getLayoutResource() {
+        return R.layout.activity_post_list;
     }
 }
