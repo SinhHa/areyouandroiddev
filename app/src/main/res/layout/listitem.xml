@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TitleBlock"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ContentId"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Author"
+            android:layout_marginLeft= "10dp"
+            android:linksClickable="true"
+            android:autoLink="web"
+            android:textColor="#0645AD"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="in"
+            android:layout_marginLeft= "10dp"
+            android:textColor="#000000"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/site"
+            android:layout_marginLeft= "10dp"
+            android:textColor="#0645AD"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:paddingLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Tittle"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        android:layout_below="@+id/TitleBlock"
+        />
+
+    <TextView
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Subreddit"
+        android:layout_below="@+id/Tittle"
+        android:textColor="#0A295A"/>
+</RelativeLayout>
