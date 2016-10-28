@@ -32,6 +32,7 @@ public class RedditPostConverter extends EasyDeserializer<RedditPost> {
                 redditPost.setCreatedUTC(getLongValue(dataJsonObject.get("created_utc"), 0));
                 redditPost.setSubreddit(getStringValue(dataJsonObject.get("subreddit"), null));
                 redditPost.setDomain(getStringValue(dataJsonObject.get("domain"), null));
+                redditPost.setName(getStringValue(dataJsonObject.get("name"),null));
             }
         }
         return redditPost;

@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Created by Jupiter (vu.cao.duy@gmail.com) on 10/8/15.
  */
-public class FileBasedFeedDataStore implements FeedDataStore {
+/*public class FileBasedFeedDataStore implements FeedDataStore {
 
     private InputStream fileInputStream;
     private Gson gson;
@@ -34,4 +34,5 @@ public class FileBasedFeedDataStore implements FeedDataStore {
             onRedditPostsRetrievedListener.onRedditPostsRetrieved(posts, null);
         }
     }
-}
+}*/
+public class FileBasedFeedDataStore {}

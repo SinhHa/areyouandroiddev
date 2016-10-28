@@ -7,11 +7,12 @@ import java.util.List;
 /**
  * Created by Jupiter (vu.cao.duy@gmail.com) on 10/8/15.
  */
-public interface FeedDataStore {
+public interface FeedDataStore{
     interface OnRedditPostsRetrievedListener {
-        void onRedditPostsRetrieved(List<RedditPost> postList, Exception ex);
+        void onRedditPostsRetrieved(List<RedditPost> postList, String after, Exception ex);
     }
 
-    void getPostList(OnRedditPostsRetrievedListener onRedditPostsRetrievedListener);
+    void getPostList(String topic, String before, String after,
+                     OnRedditPostsRetrievedListener onRedditPostsRetrievedListener);
 
 }

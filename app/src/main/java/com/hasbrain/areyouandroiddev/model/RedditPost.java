@@ -6,6 +6,7 @@ package com.hasbrain.areyouandroiddev.model;
 public class RedditPost {
     private String id;
     private String title;
+    private String name;
     private int score;
     private int commentCount;
     private String url;
@@ -14,6 +15,10 @@ public class RedditPost {
     private String subreddit;
     private String domain;
     private long createdUTC;
+
+    public String getName(){return name;}
+
+    public void setName(String name){this.name =name;}
 
     public String getId() {
         return id;
